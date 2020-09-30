@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <section id="blur">
+        <h1><a href="#" id="loginTrigger">Log In</a></h1>
+    </section>
+    <div class="container" id="container">
+        <h2>Our Newsletter</h2>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Full name</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Email Address</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+        <span class="accountbox-close-button" >X</span>
+    </div>
+    <script>
+        const login = document.getElementById('loginTrigger');
+        const blur = document.getElementById('blur');
+        const closeLogin = document.getElementsByClassName('accountbox-close-button')[0];
+        const body = document.getElementsByTagName('body');
+        login.addEventListener('click', function(e){
+            e.preventDefault();
+            const container = document.getElementById('container');
+            container.classList.add('is-visible');
+            blur.classList.add('active');
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        });
+        closeLogin.addEventListener('click', function(e){
+            container.classList.remove('is-visible');
+            blur.classList.remove('active');
+            document.getElementsByTagName('body')[0].style.overflow = 'visible';
+        })
+    </script>
+</body>
+</html>

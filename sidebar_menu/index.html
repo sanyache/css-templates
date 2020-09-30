@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Side Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>
+            My App
+        </header>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+            <li><a href="#" class="submenu-btn"><i class="fas fa-stream"></i>Overview<span class="fas fa-caret-down"></span></a>
+                <ul class="sub-menu" hidden>
+                    <li><a href="#">Inside1</a></li>
+                    <li><a href="#">Inside2</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="submenu-btn"><i class="fas fa-stream"></i>Superview<span class="fas fa-caret-down"></span></a>
+                <ul class="sub-menu" hidden>
+                    <li><a href="#">Inside1</a></li>
+                    <li><a href="#">Inside2</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+    <section></section>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.submenu-btn').click(function(e){
+                e.preventDefault();
+                let subShow = e.currentTarget.nextElementSibling;
+                subShow.hidden = !subShow.hidden;
+                e.currentTarget.lastChild.classList.toggle('rotate');
+            })
+        })
+    </script>
+</body>

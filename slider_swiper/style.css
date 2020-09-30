@@ -1,0 +1,37 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+  }
+  .swiper-container 
+  {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
+  .swiper-slide 
+  {
+    background-position: center;
+    background-size: cover;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    -webkit-box-reflect: below 1px liner-gradient(transparent, transparent, #0006);
+    overflow: hidden;
+  }
+  .swiper-container .swiper-slide img
+  {
+      width: 480px;
+      height: 480px;
+  }
